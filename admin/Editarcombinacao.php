@@ -72,6 +72,11 @@ else{
 	<label for="disciplina_professor">Professor - Disciplina:</label>
 		<select class="selectform" name="diprof">
 			<?php
+				$sl = "SELECT* FROM horarios_ambiente_disciplina_professor WHERE id=".$id;
+				$resul = mysqli_query($conexao,$sl);
+				$linhaa = mysqli_fetch_array($resul,MYSQLI_ASSOC);
+
+
 				$sql = "SELECT* FROM disciplina_professor";
 				$results = mysqli_query($conexao,$sql);
 				$linhas = mysqli_fetch_all($results,MYSQLI_ASSOC);
@@ -85,9 +90,9 @@ else{
 					$linh = mysqli_fetch_array($resulttts,MYSQLI_ASSOC);
 
 					echo '<option value="'.$linha['id'].'"';
-					// if($linha['id_disciplina']==$linh['id']){
-					// 	echo 'selected';
-					// }
+					if ($linhaa['disciplina_professor']==$linha['id']){
+						echo 'selected';
+					}
 					echo '>'.$lin['nome'].' - '.$linh['nome'].'</option>';
 				}
 			?>

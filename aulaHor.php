@@ -6,7 +6,7 @@ require_once('assets/func/funcoes.php');
 <div class="anuncioo">
 	<h3>Disciplinas por sala</h3>
 </div>
-<form method="post" action="aulaHorarios.php">
+<form method="post" action="aulaHorarios.php" class="verr">
 	<div class="botao_direita">
 		<?php
 			selectambiente($conexao);

@@ -10,7 +10,7 @@ require_once('assets/inc/conexao.php');
 	</div>
 	
 	<div class="form-group">
-		<label for="senha">Senha:<span>Senha inválida</span></label><input type="password" name="senha" id="senha" placeholder="senha de 8 digitos" minlength="8" maxlength="32" class="senha5">
+		<label for="senha">Senha:<span>Senha inválida</span></label><input type="password" name="senha" id="senha" placeholder="senha de 8 digitos" minlength="3" maxlength="32" class="senha5">
 	</div>
 	
 	<input type="submit" name="enviar" class="enviar">

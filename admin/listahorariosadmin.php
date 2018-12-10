@@ -1,11 +1,14 @@
-<?php
-require_once('assets/inc/conexao.php');
-require_once('assets/func/funcoes.php');
+<?php 
+require_once("../assets/inc/conexao.php");
+require_once('../assets/func/funcoes.php');
+if(!$_SESSION['admin']){
+	header('location:../ops.php');
+}
 $sala = $_GET['ambiente'];
 $turno = $_GET['turno'];
 
 ?>
-<div class="tabelahorariosfixos">
+<div class="tabelahorariosfixosadmin">
 <table border="1px">
 	<thead>
 		<td>Horarios</td>
@@ -38,31 +41,31 @@ $turno = $_GET['turno'];
 
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'segunda',$conexao);
+				horariosadmin($sala,$turno,$hora,'segunda',$conexao);
 			?>
 		</td>	
 
 
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'terça',$conexao);
+				horariosadmin($sala,$turno,$hora,'terça',$conexao);
 			?>
 		</td>
 
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'quarta',$conexao);
+				horariosadmin($sala,$turno,$hora,'quarta',$conexao);
 			?>
 		</td>
 
 		<td><?php
-				horarios($sala,$turno,$hora,'quinta',$conexao);
+				horariosadmin($sala,$turno,$hora,'quinta',$conexao);
 			?>		
 		</td>
 
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'sexta',$conexao);
+				horariosadmin($sala,$turno,$hora,'sexta',$conexao);
 			?>
 		</td>
 	
@@ -88,27 +91,27 @@ $turno = $_GET['turno'];
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'segunda',$conexao);
+				horariosadmin($sala,$turno,$hora,'segunda',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'terça',$conexao);
+				horariosadmin($sala,$turno,$hora,'terça',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'quarta',$conexao);
+				horariosadmin($sala,$turno,$hora,'quarta',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'quinta',$conexao);
+				horariosadmin($sala,$turno,$hora,'quinta',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'sexta',$conexao);
+				horariosadmin($sala,$turno,$hora,'sexta',$conexao);
 			?>
 		</td>
 	</tr>
@@ -134,27 +137,27 @@ $turno = $_GET['turno'];
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'segunda',$conexao);
+				horariosadmin($sala,$turno,$hora,'segunda',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'terça',$conexao);
+				horariosadmin($sala,$turno,$hora,'terça',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'quarta',$conexao);
+				horariosadmin($sala,$turno,$hora,'quarta',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'quinta',$conexao);
+				horariosadmin($sala,$turno,$hora,'quinta',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'sexta',$conexao);
+				horariosadmin($sala,$turno,$hora,'sexta',$conexao);
 			?>
 		</td>
 	</tr>
@@ -180,27 +183,27 @@ $turno = $_GET['turno'];
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'segunda',$conexao);
+				horariosadmin($sala,$turno,$hora,'segunda',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'terça',$conexao);
+				horariosadmin($sala,$turno,$hora,'terça',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'quarta',$conexao);
+				horariosadmin($sala,$turno,$hora,'quarta',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'quinta',$conexao);
+				horariosadmin($sala,$turno,$hora,'quinta',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'sexta',$conexao);
+				horariosadmin($sala,$turno,$hora,'sexta',$conexao);
 			?>
 		</td>
 	</tr>
@@ -226,27 +229,27 @@ $turno = $_GET['turno'];
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'segunda',$conexao);
+				horariosadmin($sala,$turno,$hora,'segunda',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'terça',$conexao);
+				horariosadmin($sala,$turno,$hora,'terça',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'quarta',$conexao);
+				horariosadmin($sala,$turno,$hora,'quarta',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'quinta',$conexao);
+				horariosadmin($sala,$turno,$hora,'quinta',$conexao);
 			?>
 		</td>
 		<td>
 			<?php
-				horarios($sala,$turno,$hora,'sexta',$conexao);
+				horariosadmin($sala,$turno,$hora,'sexta',$conexao);
 			?>
 		</td>
 	</tr>

@@ -287,7 +287,7 @@ $(document).ready(function(){
      $("#bt_menuu").click(function(){
         var naveg = $(".naveg");
         if(naveg.hasClass('open')){
-            naveg.css("margin-top","-100%");
+            naveg.css("margin-top","-200%");
             naveg.removeClass('open');
             
         }
@@ -366,7 +366,7 @@ $(document).ready(function(){
 
 
 
-       $("form").submit(function(e){
+       $("form.verr").submit(function(e){
             if($("#ambiente").val()!=''){
                 $("#ambiente").css("border","none");
             }
@@ -389,6 +389,48 @@ $(document).ready(function(){
             var ambiente = $('#ambiente').val();
             var turno = $('#turno').val();
             var carrega_url = 'aulaHorarios.php?ambiente='+ambiente+'&turno='+turno;
+            console.log(carrega_url);
+            $.ajax({
+                url: carrega_url,
+                type:"GET",
+                // data:{ambiente:ambiente,turno:turno},
+                // dataType:"json",
+                success: function(data){
+                    $('.tabelahorarios p').hide();
+                    $('.tabelahorarios').html(data);
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                  }
+                
+            })
+            
+       });
+
+       $("form.verrr").submit(function(e){
+            if($("#ambiente").val()!=''){
+                $("#ambiente").css("border","none");
+            }
+
+            if($("#turno").val()!=''){
+                $("#turno").css("border","none");
+            }
+
+            if($("#ambiente").val()==''){
+                $("#ambiente").css("border","3px solid red");
+                $("#ambiente").focus();
+                return false;
+            }
+            if($("#turno").val()==''){
+                $("#turno").css("border","3px solid red");
+                $("#turno").focus();
+                return false; 
+            }
+            e.preventDefault();
+            var ambiente = $('#ambiente').val();
+            var turno = $('#turno').val();
+            var carrega_url = 'listahorariosadmin.php?ambiente='+ambiente+'&turno='+turno;
             console.log(carrega_url);
             $.ajax({
                 url: carrega_url,

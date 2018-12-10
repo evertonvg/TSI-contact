@@ -34,16 +34,16 @@
           <a href="index.php" class="espaco"><img src="assets/img/pelotas_logo_superiorsistemasparainternet3.png" alt="logo  do tsi" width="160px"></a>
         </div>
 
-        <div class="div_pesquisa">
+        <!-- <div class="div_pesquisa">
           <form method="post" action="#" class="form-pesquisa">
             <form action=" " method="post" id="demo-2">             
               <div class="cont">
                 <input type="search" id="busca" name="q"  class="pesquisa" placeholder="pesquisa">
-                <!--<button type="submit" class="search"></button></input>-->
+              
               </div> 
             </form> 
           </form> 
-        </div>
+        </div> -->
         <div id="bt_menuu">
           <i class="fas fa-bars"></i>
         </div>
@@ -66,9 +66,11 @@
                           <li><a href="monit.php" title="monitores">Monitores</a></li>
                           <li><a href="meuHor.php" title="meus horarios">Meus horários</a></li>
                           <li><a href="aulaHor.php" title="horários por sala">Horários por sala</a></li>
+                          
                         </ul>
                     </li>
-                    <li><a href="Perfil.php?id='.$_SESSION['id'].'">'.$_SESSION['user'].'</a></li>';
+                    <li><a href="Perfil.php?id='.$_SESSION['id'].'">'.$_SESSION['user'].'</a></li>
+                    ';
             }
              if(isset($_SESSION['admin'])){
               echo '<li id="admin"><a href="admin/admin.php">Admin</a></li>';

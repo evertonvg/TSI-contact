@@ -1,5 +1,5 @@
 <?php
-require_once('assets/inc/conexao.php');
+require_once('assets/inc/conexao.php'); 
 require_once('assets/inc/header.php');
  
 $id=$_GET['id'];

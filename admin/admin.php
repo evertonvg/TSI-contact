@@ -11,6 +11,7 @@ require_once("assets/inc/header.php");
 	</div>
 	<div>
 		<ul class="dashh" ">
+			<li><a href="Publicacoes.php">Publicações</a></li>
 			<li><a href="Alunos.php">Alunos</a></li>
 			<li><a href="Monitores.php">Monitores</a></li>
 			<li><a href="Professores.php">Professores</a></li>

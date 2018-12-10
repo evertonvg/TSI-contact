@@ -71,7 +71,7 @@ else{
 	<label for="Usuario">Apelido:</label><input type="text" id="Usuario" name="apelido" value="<?php echo $result['apelido'];?>">
 	<label for="Email">Email:</label><input type="email" id="Email" name="email" value="<?php echo $result['email'];?>">
 	<label for="senha">Senha:</label><input type="password" name="senha" id="senha" value="<?php echo $result['senha'];?>">
-	<label for="telefone">Telefone:</label><input type="number" name="telefone" value="<?php echo $result['wpp_celular'];?>">
+	<label for="telefone">Telefone:</label><input type="text" name="telefone" value="<?php echo $result['wpp_celular'];?>">
 	<!--<label for="senha">Senha:</label><input type="text" name="senha" value="<?php echo $result['senha'];?>">-->
 	<label for="caminhoFoto">Caminho da foto:</label><input type="text" name="caminhoFoto" readonly id="caminhoFoto"value="<?php echo $result['foto']; ?>">	
 	<label for="improprio">Foto imprópria?:</label><input type="checkbox" name="improprio" id="improprio" value="1" class="custom-control-input">
@@ -79,3 +79,7 @@ else{
 
 	<input type="submit" name="Enviar" value="Modificar" class="enviar Editarusuario"">
 </form>
+
+<script type="text/javascript">
+	$('input[name="telefone"]').mask('(00)00000-0000');
+</script>
